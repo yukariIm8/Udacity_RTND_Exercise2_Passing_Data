@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+/* display a list of all of the users who said that this movie was their favorite. */
 class UserList extends Component {
 	render() {
     	const { usersWhoLikedMovie, users } = this.props;
