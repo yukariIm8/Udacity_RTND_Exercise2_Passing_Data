@@ -10,7 +10,7 @@ class MovieCard extends Component{
         	<li key={movieInfo.id}>
             	<h2>{movieInfo.name}</h2>
                 <h3>Liked By:</h3>
-                <UserList userWhoLikesMovie={usersWhoLikesMovie} users={users} />            
+                <UserList usersWhoLikesMovie={usersWhoLikesMovie} users={users} />            
             </li>
          );
     }
