@@ -5,18 +5,17 @@ import MovieCard from './MovieCard';
    this movie was their favorite along with the title of the movie. */
 class Dashboard extends Component {
 	render() {
-    	const { usersByMovie, users, movies } = this.props;
-      
-      	const movieCards = Object.key(movies).map(id => (
-        	<MovieCard 
-             	key={id}
-  				users={users}
-				usersWhoLikesMovie={usersByMovie[id]}
-				movieInfo={movies[id]}
-			/>
+        const { usersByMovie, users, movies } = this.props;
+
+      	const movieCards = Object.keys(movies).map(id => (
+            <MovieCard key={id} 
+                users={users} 
+                usersWhoLikesMovie={usersByMovie[id]} 
+                movieInfo={movies[id]}
+            />
         ));
 
-		return <ul>{movieCards}</ul>      
+        return <ul>{movieCards}</ul>      
     }
 }
 
