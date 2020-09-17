@@ -104,8 +104,8 @@ class App extends Component {
     this.usersByMovie = {};
     
     profiles.forEach(profile => {
-    	const movieID = profile.favoriteMovieID;
-      
+      const movieID = profile.favoriteMovieID;
+
       if(this.usersByMovie[movieID]) {
         this.usersByMovie[movieID].push(profile.userID);   
       } else {
@@ -113,7 +113,7 @@ class App extends Component {
       }
    });
   }
-  
+
   render() {
     return (
       <div className="App">
